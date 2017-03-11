@@ -32,3 +32,9 @@ cat \
         | uniq \
         > final.txt
 ```
+
+Create dnsmasq conf:
+```
+SERVER=114.114.114.114
+cat china-names.txt | sed "s|\(.*\)|server=/\1/${SERVER}|" > china-names.conf
+```
